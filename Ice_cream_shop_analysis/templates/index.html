@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Shop Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="container">
+    <h1>Ice Cream Shop Analysis</h1>
+    <form action="{{url_for('predict')}}" method="post">
+      <input type="'text" name="temperature" placeholder="Enter temperature"></input>
+      <button type="submit">predict</button>
+    </form>
+    <h3> {{prediction_text}}</h3>
+    <div class="ice-cream-images">
+      <img src="{{ url_for('static', filename='one.jpg') }}" class="ice-cream-image">
+      <img src="{{ url_for('static', filename='two.jpg') }}" class="ice-cream-image">
+      <img src="{{ url_for('static', filename='three.jpg') }}" class="ice-cream-image">
+      <img src="{{ url_for('static', filename='four.jpg') }}" class="ice-cream-image">
+      <img src="{{ url_for('static', filename='five.jpg') }}" class="ice-cream-image">
+      <img src="{{ url_for('static', filename='Blueberry-ice-cream-5.jpg') }}" class="ice-cream-image">
+    </div>
+    <div class="ice-cream-cone">
+      <i class="fas fa-ice-cream"></i>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
